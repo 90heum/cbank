@@ -20,6 +20,15 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <receiver
+            android:name=".activity.InstallReferrerReceiver"
+            android:permission="android.permission.INSTALL_PACKAGES"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="com.cbank.android.activity.ActivityMain"
             android:screenOrientation="portrait"
